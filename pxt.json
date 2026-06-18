@@ -1,0 +1,11 @@
+{
+    "name": "magic-portals",
+    "version": "0.0.1",
+    "description": "Teleportation portals for MakeCode Arcade",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts"
+    ]
+}
