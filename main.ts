@@ -7,37 +7,37 @@ namespace magicPortals {
      * Create Portal A
      */
     //% block="create portal A at x %x y %y"
-    export function createPortalA(x: number, y: number) {
-        portalA = sprites.create(img`
-            . . 5 5 5 . .
-            . 5 5 5 5 5 .
-            5 5 1 1 1 5 5
-            5 1 5 5 5 1 5
-            5 1 5 5 5 1 5
-            5 5 1 1 1 5 5
-            . 5 5 5 5 5 .
-            . . 5 5 5 . .
-        `, SpriteKind.Food)
-        portalA.setPosition(x, y)
-    }
+export function createPortalA(x: number, y: number) {
+    portalA = sprites.create(img`
+        . . 5 5 5 . .
+        . 5 5 5 5 5 .
+        5 5 1 1 1 5 5
+        5 1 5 5 5 1 5
+        5 1 5 5 5 1 5
+        5 5 1 1 1 5 5
+        . 5 5 5 5 5 .
+        . . 5 5 5 . .
+    `, SpriteKind.Food)
 
-    /**
-     * Create Portal B
-     */
-    //% block="create portal B at x %x y %y"
-    export function createPortalB(x: number, y: number) {
-        portalB = sprites.create(img`
-            . . 9 9 9 . .
-            . 9 9 9 9 9 .
-            9 9 1 1 1 9 9
-            9 1 9 9 9 1 9
-            9 1 9 9 9 1 9
-            9 9 1 1 1 9 9
-            . 9 9 9 9 9 .
-            . . 9 9 9 . .
-        `, SpriteKind.Food)
-        portalB.setPosition(x, y)
-    }
+    portalA.left = x
+    portalA.top = y
+}
+
+export function createPortalB(x: number, y: number) {
+    portalB = sprites.create(img`
+        . . 9 9 9 . .
+        . 9 9 9 9 9 .
+        9 9 1 1 1 9 9
+        9 1 9 9 9 1 9
+        9 1 9 9 9 1 9
+        9 9 1 1 1 9 9
+        . 9 9 9 9 9 .
+        . . 9 9 9 . .
+    `, SpriteKind.Food)
+
+    portalB.left = x
+    portalB.top = y
+}
 
     /**
      * Enable teleporting
